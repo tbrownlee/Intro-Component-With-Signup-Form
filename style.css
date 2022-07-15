@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    /* Primary*/
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+
+    /* Accent */
+    --blue: hsl(248, 32%, 49%);
+
+    /* Neutral */
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+
+    /* Borders */
+    --border-radius-promo-form: .8rem;
+    --border-radius-input-button: .5rem;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+
+    background-color: var(--red);
+    background-image: url(./images/bg-intro-mobile.png);
+
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    width: 87%;
+}
+
+/* Heading and description section */
+.heading-and-description {
+    margin-top: 8rem;
+}
+
+.heading {
+    margin-bottom: 1.7rem;
+
+    font-size: 2.8rem;
+    color: white;
+}
+
+.description {
+    margin-bottom: 5.5rem;
+
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2.5rem;
+    color: hsla(0, 0%, 100%, .8);
+}
+
+/* Promo and Form section */
+.promo {
+    margin-bottom: 2rem;
+    box-shadow: 0rem .8rem 0rem 0rem rgba(0, 0, 0, .12);
+    border-radius: var(--border-radius-promo-form);
+    padding: 1.5rem 6rem;
+
+    background-color: var(--blue);
+}
+
+.promo p {
+    font-size: 1.4rem;
+    color: hsla(0, 0%, 100%, .85);
+}
+
+.promo span {
+    font-weight: 600;
+    color: white;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0rem .8rem 0rem 0rem rgba(0, 0, 0, .15);
+    border-radius: var(--border-radius-promo-form);
+    padding: 2.1rem 2rem 2.5rem 2rem;
+
+    background-color: white;
+}
+
+/* Input image container div */
+.input-image-container {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 1.5rem;
+}
+
+.input {
+    border: .1rem solid hsla(246, 25%, 77%, .4);
+    border-radius: var(--border-radius-input-button);
+    width: 100%;
+    padding: 1.5rem 1rem 1.5rem 1.5rem;
+
+    font-weight: 600;
+    letter-spacing: .05rem;
+    color: hsla(0, 0%, 0%, .7);
+}
+
+.input:focus {
+    outline: none;
+}
+
+.input::placeholder {
+    color: var(--c, #110f0f);
+}
+
+.error-image {
+    position: absolute;
+    top: 1.4rem;
+    right: 2.5rem;
+
+    display: none;
+
+    width: 2.3rem;
+}
+
+.error-text {
+    display: none;
+
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-style: italic;
+    text-align: right;
+    color: #FF7979;
+}
+
+/* Button */
+.button {
+    margin-bottom: .8rem;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-bottom-width: .4rem;
+    border-radius: var(--border-radius-input-button);
+    padding: 1.5rem 1rem;
+
+    background-color: var(--green);
+}
+
+.button:hover {
+    background-color: hsla(154, 59%, 51%, .7);
+    cursor: pointer;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: .1rem;
+    color: white;
+}
+
+/* Terms agreement */
+.terms-agreement {
+    padding-right: 1rem;
+    padding-left: 1rem;
+
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    color: var(--grayish-blue);
+}
+
+.terms-agreement span {
+    font-weight: 700;
+    color: var(--red);
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 40rem) {
+    body {
+        background-image: url(./images/bg-intro-desktop.png);
+    }
+
+    main {
+        flex-direction: row;
+        justify-content: center;
+
+        gap: 1.5rem;
+    }
+
+    /* Heading and description section */
+    .heading-and-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 0;
+        width: 52rem;
+        padding-top: 6rem;
+
+        text-align: left;
+    }
+
+    .heading {
+        margin-bottom: 2.5rem;
+
+        font-size: 4.6rem;
+        line-height: 5.2rem;
+    }
+
+    .description {
+        font-size: 1.5rem;
+    }
+
+    .promo-and-form {
+        width: 51rem;
+    }
+
+    /* Promo and Form section */
+    .promo {
+        margin-bottom: 2.2rem;
+        padding: 1.8rem 1rem;
+    }
+
+    .form {
+        position: relative;
+
+        padding: 3.8rem 3.8rem 3.8rem 3.8rem;
+    }
+
+    /* Input image container div */
+    .input {
+        margin-bottom: .3rem;
+        padding: 1.6rem 1rem 1.6rem 2.8rem;
+    }
+
+    .error-image {
+        top: 1.5rem;
+
+        width: 2.2rem;
+    }
+
+    /* Button */
+    .button {
+        margin-bottom: 1rem;
+        padding: 1.3rem 1rem .8rem 1rem;
+    }
+
+    /* Terms agreement */
+    .terms-agreement {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Classes for JavaScript to use */
+.blue-border {
+    border-color: var(--blue);
+}
+
+.border-desktop {
+    border-width: .3rem;
+    border-color: var(--red);
+}
+
+.border-mobile {
+    border-width: .2rem;
+    border-color: var(--red);
+}
+
+.show {
+    display: block;
+}
