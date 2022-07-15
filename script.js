@@ -170,6 +170,23 @@ function isBorderBlue(i) {
 
 
 
+/* This eventListener changes the border type depending on the page size (if you swap between different page widths (mobile and desktop) ) */
+mediaQuery.addEventListener("change", function(e) {
+    for(let i = 0; i < inputList.length; i++) {
+        if(e.matches && inputList[i].classList.contains("border-mobile")) {
+            inputList[i].classList.toggle("border-mobile");
+            inputList[i].classList.toggle("border-desktop");
+        } else if(inputList[i].classList.contains("border-desktop")) {
+            inputList[i].classList.toggle("border-desktop");
+            inputList[i].classList.toggle("border-mobile");
+        }
+    }
+})
+
+
+
+
+
 /* Prevents page from reloading when form is submitted */
 form.onsubmit = function() {
     return false;
